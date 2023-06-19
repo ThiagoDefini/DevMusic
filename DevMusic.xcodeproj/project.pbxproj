@@ -17,6 +17,17 @@
 		7BCCCF612A40CFF700BBA6EA /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BCCCF5E2A40CFF700BBA6EA /* data.json */; };
 		7BCCCF622A40CFF700BBA6EA /* data-with-images.json in Resources */ = {isa = PBXBuildFile; fileRef = 7BCCCF5F2A40CFF700BBA6EA /* data-with-images.json */; };
 		7BCCCF652A40D00400BBA6EA /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCCCF642A40D00400BBA6EA /* MusicService.swift */; };
+		DCE2AD462A40D68000F68842 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE2AD452A40D68000F68842 /* LibraryViewController.swift */; };
+		DCE2AD482A40D6A500F68842 /* PlaylistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE2AD472A40D6A500F68842 /* PlaylistsViewController.swift */; };
+		DCE2AD4A2A40D6B300F68842 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE2AD492A40D6B300F68842 /* ArtistsViewController.swift */; };
+		DCE2AD4C2A40D6BF00F68842 /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE2AD4B2A40D6BF00F68842 /* SongsViewController.swift */; };
+		DCE2AD4E2A40D6CA00F68842 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE2AD4D2A40D6CA00F68842 /* PlaylistViewController.swift */; };
+		DCE2AD502A40D6D400F68842 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE2AD4F2A40D6D400F68842 /* SearchViewController.swift */; };
+		DCE2AD522A40D6E600F68842 /* FavoritesEmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE2AD512A40D6E600F68842 /* FavoritesEmptyViewController.swift */; };
+		DCE2AD542A40D6F300F68842 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE2AD532A40D6F300F68842 /* FavoritesViewController.swift */; };
+		DCE2AD562A40D70100F68842 /* PlayMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE2AD552A40D70100F68842 /* PlayMusicViewController.swift */; };
+		DCE2AD592A40DA3E00F68842 /* Luana.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE2AD582A40DA3E00F68842 /* Luana.storyboard */; };
+		DCE2AD5B2A40DA4700F68842 /* Thiago.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE2AD5A2A40DA4700F68842 /* Thiago.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +43,17 @@
 		7BCCCF5E2A40CFF700BBA6EA /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		7BCCCF5F2A40CFF700BBA6EA /* data-with-images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-with-images.json"; sourceTree = "<group>"; };
 		7BCCCF642A40D00400BBA6EA /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
+		DCE2AD452A40D68000F68842 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LibraryViewController.swift; path = DevMusic/LibraryViewController.swift; sourceTree = SOURCE_ROOT; };
+		DCE2AD472A40D6A500F68842 /* PlaylistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsViewController.swift; sourceTree = "<group>"; };
+		DCE2AD492A40D6B300F68842 /* ArtistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewController.swift; sourceTree = "<group>"; };
+		DCE2AD4B2A40D6BF00F68842 /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
+		DCE2AD4D2A40D6CA00F68842 /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
+		DCE2AD4F2A40D6D400F68842 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DCE2AD512A40D6E600F68842 /* FavoritesEmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesEmptyViewController.swift; sourceTree = "<group>"; };
+		DCE2AD532A40D6F300F68842 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		DCE2AD552A40D70100F68842 /* PlayMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMusicViewController.swift; sourceTree = "<group>"; };
+		DCE2AD582A40DA3E00F68842 /* Luana.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Luana.storyboard; sourceTree = "<group>"; };
+		DCE2AD5A2A40DA4700F68842 /* Thiago.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Thiago.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +86,14 @@
 		7BCCCF472A40CFEB00BBA6EA /* DevMusic */ = {
 			isa = PBXGroup;
 			children = (
+				DCE2AD572A40D70600F68842 /* ViewControllers */,
 				7BCCCF632A40D00400BBA6EA /* Service */,
 				7BCCCF5C2A40CFF700BBA6EA /* Model */,
 				7BCCCF482A40CFEB00BBA6EA /* AppDelegate.swift */,
 				7BCCCF4A2A40CFEB00BBA6EA /* SceneDelegate.swift */,
 				7BCCCF4C2A40CFEB00BBA6EA /* ViewController.swift */,
+				DCE2AD5A2A40DA4700F68842 /* Thiago.storyboard */,
+				DCE2AD582A40DA3E00F68842 /* Luana.storyboard */,
 				7BCCCF4E2A40CFEB00BBA6EA /* Main.storyboard */,
 				7BCCCF512A40CFEC00BBA6EA /* Assets.xcassets */,
 				7BCCCF532A40CFEC00BBA6EA /* LaunchScreen.storyboard */,
@@ -93,6 +118,22 @@
 				7BCCCF642A40D00400BBA6EA /* MusicService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		DCE2AD572A40D70600F68842 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DCE2AD472A40D6A500F68842 /* PlaylistsViewController.swift */,
+				DCE2AD492A40D6B300F68842 /* ArtistsViewController.swift */,
+				DCE2AD4D2A40D6CA00F68842 /* PlaylistViewController.swift */,
+				DCE2AD512A40D6E600F68842 /* FavoritesEmptyViewController.swift */,
+				DCE2AD4F2A40D6D400F68842 /* SearchViewController.swift */,
+				DCE2AD532A40D6F300F68842 /* FavoritesViewController.swift */,
+				DCE2AD552A40D70100F68842 /* PlayMusicViewController.swift */,
+				DCE2AD4B2A40D6BF00F68842 /* SongsViewController.swift */,
+				DCE2AD452A40D68000F68842 /* LibraryViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +195,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BCCCF552A40CFEC00BBA6EA /* LaunchScreen.storyboard in Resources */,
+				DCE2AD592A40DA3E00F68842 /* Luana.storyboard in Resources */,
 				7BCCCF602A40CFF700BBA6EA /* data-images.json in Resources */,
 				7BCCCF522A40CFEC00BBA6EA /* Assets.xcassets in Resources */,
+				DCE2AD5B2A40DA4700F68842 /* Thiago.storyboard in Resources */,
 				7BCCCF612A40CFF700BBA6EA /* data.json in Resources */,
 				7BCCCF502A40CFEB00BBA6EA /* Main.storyboard in Resources */,
 				7BCCCF622A40CFF700BBA6EA /* data-with-images.json in Resources */,
@@ -169,9 +212,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE2AD502A40D6D400F68842 /* SearchViewController.swift in Sources */,
+				DCE2AD4A2A40D6B300F68842 /* ArtistsViewController.swift in Sources */,
 				7BCCCF4D2A40CFEB00BBA6EA /* ViewController.swift in Sources */,
+				DCE2AD462A40D68000F68842 /* LibraryViewController.swift in Sources */,
 				7BCCCF492A40CFEB00BBA6EA /* AppDelegate.swift in Sources */,
 				7BCCCF4B2A40CFEB00BBA6EA /* SceneDelegate.swift in Sources */,
+				DCE2AD4E2A40D6CA00F68842 /* PlaylistViewController.swift in Sources */,
+				DCE2AD522A40D6E600F68842 /* FavoritesEmptyViewController.swift in Sources */,
+				DCE2AD4C2A40D6BF00F68842 /* SongsViewController.swift in Sources */,
+				DCE2AD482A40D6A500F68842 /* PlaylistsViewController.swift in Sources */,
+				DCE2AD562A40D70100F68842 /* PlayMusicViewController.swift in Sources */,
+				DCE2AD542A40D6F300F68842 /* FavoritesViewController.swift in Sources */,
 				7BCCCF652A40D00400BBA6EA /* MusicService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +371,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RU3T8G764D;
+				DEVELOPMENT_TEAM = ZD8SZ56ZFY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DevMusic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -327,6 +379,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,7 +400,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RU3T8G764D;
+				DEVELOPMENT_TEAM = ZD8SZ56ZFY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DevMusic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -355,6 +408,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
