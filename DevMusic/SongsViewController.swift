@@ -7,23 +7,44 @@
 
 import UIKit
 
-class SongsViewController: UIViewController {
-
+class SongsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var musics: [Music] = []
+    var musicService: MusicService? = try? MusicService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+       
+        guard let musicService = self.musicService else { return }
+        musics = musicService.getAllMusics()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        self.reloadData()
     }
-    */
+    
+    private func reloadData() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return musics.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let music = musics[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SongsCell", for: indexPath) as! SongsTableViewCell
+        cell.coverImage.image = UIImage(named: music.id)
+        cell.title.text = music.title
+        cell.subtitle.text = music.artist
+        return cell
+    }
 
 }
