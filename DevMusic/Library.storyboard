@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6XO-KD-F5A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6XO-KD-F5A">
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -308,11 +308,13 @@
             </objects>
             <point key="canvasLocation" x="2055.7251908396947" y="26.760563380281692"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Library-->
         <scene sceneID="4an-LI-3eR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6XO-KD-F5A" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Library" image="LibrarySelected" selectedImage="Library" id="DmD-TJ-klC"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="0I2-3b-rvN">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -329,6 +331,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Library" width="21" height="27"/>
+        <image name="LibrarySelected" width="21" height="27"/>
         <namedColor name="tintColor">
             <color red="1" green="0.21568627450980393" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
