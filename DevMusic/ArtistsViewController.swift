@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ArtistsViewController: UIViewController, UITableViewDataSource {
+class ArtistsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -15,6 +15,7 @@ class ArtistsViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
         tableView.dataSource = self
     }
     
@@ -29,5 +30,11 @@ class ArtistsViewController: UIViewController, UITableViewDataSource {
         cell.coverImage.image = UIImage(named: opcao.description)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToPlaylistArtist", sender: nil)
+        
+    }
+    
     
 }

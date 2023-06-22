@@ -8,14 +8,14 @@
 import UIKit
 
 class LibraryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var categories: [MusicCollectionType] = [.playlist, .artists, .songs]
     let segueIdentifierPlaylists: String = "goToPlaylists"
     let segueIdentifierArtists: String = "goToArtists"
     let segueIdentifierSongs: String = "goToSongs"
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
