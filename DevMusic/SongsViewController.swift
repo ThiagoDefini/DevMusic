@@ -46,5 +46,27 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.subtitle.text = music.artist
         return cell
     }
+    
+    //Delegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "goToPlayMusic", sender: self.musics[indexPath.row])
+    }
+    
+    //Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToPlayMusic"{
+            guard let destination = segue.destination as? UINavigationController else { return }
+            guard let vc = destination.topViewController as? PlayMusicViewController else { return }
+            guard let musicPicked = sender as? Music else { return }
+            
+            vc.music = musicPicked
+            
+            
+        }
+        
+        
+    }
+
 
 }

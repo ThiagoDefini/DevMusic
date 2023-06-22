@@ -234,6 +234,7 @@
                     <navigationItem key="navigationItem" title="Songs" largeTitleDisplayMode="never" style="editor" id="Rql-rc-nG0"/>
                     <connections>
                         <outlet property="tableView" destination="Vpr-X1-4sd" id="dQT-Pv-2d2"/>
+                        <segue destination="N17-e9-CHH" kind="presentation" identifier="goToPlayMusic" id="n4g-54-w2A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhg-ot-Jib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -458,11 +459,20 @@
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" style="editor" id="RaN-de-4sl"/>
                     <connections>
                         <outlet property="tableView" destination="x07-hA-Xpu" id="ttq-jG-zwT"/>
+                        <segue destination="N17-e9-CHH" kind="presentation" identifier="goToPlayMusic" id="dFb-1j-Wn6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iay-O3-mOz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3154.9618320610684" y="420.42253521126764"/>
+            <point key="canvasLocation" x="3089" y="515"/>
+        </scene>
+        <!--PlayMusic-->
+        <scene sceneID="3Zr-91-WDj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlayMusic" id="N17-e9-CHH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MhK-7T-KZj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3690" y="1126"/>
         </scene>
         <!--Library-->
         <scene sceneID="4an-LI-3eR">
@@ -487,6 +497,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="n4g-54-w2A"/>
         <segue reference="YAX-3l-Cmr"/>
     </inferredMetricsTieBreakers>
     <resources>

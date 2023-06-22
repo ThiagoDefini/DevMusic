@@ -11,8 +11,6 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     
     let searchController = UISearchController()
     
-    var musics: [Music] = []
-    
     @IBOutlet weak var tableView: UITableView!
     
     var favorites: [Music] = []
@@ -28,26 +26,24 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.delegate = self
         
         do{
-            try favorites = MusicService().favoriteMusics
-            try musics = MusicService().getAllMusics()
+            try favorites = MusicService.singleton.favoriteMusics
         }catch{
             favorites = []
-            musics = []
         }
         
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if musics.isEmpty{
+        if favorites.isEmpty{
             return 1
         }else{
-            return musics.count
+            return favorites.count
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if musics.isEmpty{
+        if favorites.isEmpty{
             return 300
         }else{
             return 100
@@ -55,7 +51,7 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if musics.isEmpty{
+        if favorites.isEmpty{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesEmptyId", for: indexPath) as? FavoritesEmptyTableViewCell else {
                 return UITableViewCell() }
             
@@ -64,9 +60,9 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesId", for: indexPath) as? FavoritesTableViewCell else {
                 return UITableViewCell() }
             
-            cell.musicImage.image = UIImage(named: musics[indexPath.row].id)
-            cell.nameLabel.text = musics[indexPath.row].title
-            cell.bandLabel.text = musics[indexPath.row].artist
+            cell.musicImage.image = UIImage(named: favorites[indexPath.row].id)
+            cell.nameLabel.text = favorites[indexPath.row].title
+            cell.bandLabel.text = favorites[indexPath.row].artist
             
             return cell
         }
@@ -90,7 +86,8 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     
     //Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToPlayMusic", sender: self.musics[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "goToPlayMusic", sender: self.favorites[indexPath.row])
     }
     
     //Segue

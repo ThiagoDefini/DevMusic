@@ -36,5 +36,8 @@ class PlaylistsViewController: UIViewController, UITableViewDataSource, UITableV
 
         performSegue(withIdentifier: "goToPlaylist", sender: nil)
         
+        
     }
+    
+    
 }

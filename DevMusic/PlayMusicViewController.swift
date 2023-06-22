@@ -32,18 +32,19 @@ class PlayMusicViewController: UIViewController, UITableViewDataSource, UITableV
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlayMusicCell1", for: indexPath) as? PlayMusic1TableViewCell else {
             return UITableViewCell() }
         
-        cell.music = music
-        cell.fav = MusicService.singleton.favoriteMusics.contains(music!)
-//        cell.musicImage.image = UIImage(named: music?.id ?? "")
-//        cell.nameLabel.text = music?.title
-//        cell.bandLabel.text = music?.artist
+        guard let music else { return UITableViewCell() }
         
+        cell.music = music
+        cell.fav = MusicService.singleton.favoriteMusics.contains(music)
         
         
         return cell
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        
+    }
     
     
     

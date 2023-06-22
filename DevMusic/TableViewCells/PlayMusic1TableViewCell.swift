@@ -13,7 +13,7 @@ class PlayMusic1TableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bandLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
-    var fav: Bool = false
+    var fav: Bool?
     var music: Music?
     
     
@@ -27,13 +27,20 @@ class PlayMusic1TableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
         musicImage.image = UIImage(named: music?.id ?? "" )
+        nameLabel.text = music?.title
+        bandLabel.text = music?.artist
+        guard let fav else { return }
+        favoriteButton.setImage(UIImage(systemName: fav ? "heart.fill" : "heart"), for: .normal)
         
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
-        MusicService.singleton.toggleFavorite(music: music!, isFavorite: !fav)
+        guard let fav else { return }
+        
+        MusicService.singleton.toggleFavorite(music: music!, isFavorite: fav)
+        self.fav?.toggle()
+        favoriteButton.setImage(UIImage(systemName: fav ? "heart.fill" : "heart"), for: .normal)
         print(fav)
     }
     
-
 }

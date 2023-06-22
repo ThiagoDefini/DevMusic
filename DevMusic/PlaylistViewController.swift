@@ -78,7 +78,6 @@ class PlaylistViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             
-            let music = musics[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "CoverPlaylistCell", for: indexPath) as! CoverPlaylistTableViewCell
             cell.coverImage.image = UIImage(named: cImage)
             cell.title.text = name
@@ -94,4 +93,27 @@ class PlaylistViewController: UIViewController, UITableViewDelegate, UITableView
             return cell
         }
     }
+    
+    //Delegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "goToPlayMusic", sender: self.musics[indexPath.row])
+    }
+    
+    //Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToPlayMusic"{
+            guard let destination = segue.destination as? UINavigationController else { return }
+            guard let vc = destination.topViewController as? PlayMusicViewController else { return }
+            guard let musicPicked = sender as? Music else { return }
+            
+            vc.music = musicPicked
+            
+            
+        }
+        
+        
+    }
+
+    
 }
