@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vn6-NH-HpV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vn6-NH-HpV">
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,26 +29,28 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cs9-Td-ovM">
-                                                    <rect key="frame" x="8" y="10" width="377" height="170"/>
+                                                    <rect key="frame" x="16" y="8" width="361" height="174"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="350" id="PRx-G4-OOe"/>
-                                                        <constraint firstAttribute="height" constant="170" id="Yg8-3f-3XI"/>
+                                                        <constraint firstAttribute="height" constant="170" id="Dxw-2u-ADx"/>
+                                                        <constraint firstAttribute="width" constant="350" id="c2F-Oc-5FU"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpK-SM-a1T">
-                                                    <rect key="frame" x="36" y="142" width="71" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="52" y="135" width="289" height="28"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="cs9-Td-ovM" firstAttribute="leading" secondItem="6r5-Ac-fLp" secondAttribute="leading" constant="8" id="6mW-6N-EYq"/>
-                                                <constraint firstItem="GpK-SM-a1T" firstAttribute="leading" secondItem="6r5-Ac-fLp" secondAttribute="leadingMargin" constant="16" id="9CG-gc-B7D"/>
-                                                <constraint firstItem="cs9-Td-ovM" firstAttribute="top" secondItem="6r5-Ac-fLp" secondAttribute="top" constant="10" id="BWS-Ki-7CY"/>
-                                                <constraint firstAttribute="trailing" secondItem="cs9-Td-ovM" secondAttribute="trailing" constant="8" id="GeP-Fx-9Ch"/>
-                                                <constraint firstAttribute="bottom" secondItem="cs9-Td-ovM" secondAttribute="bottom" constant="10" id="N63-ae-CTB"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="GpK-SM-a1T" secondAttribute="bottom" constant="16" id="zB2-gr-Ycn"/>
+                                                <constraint firstItem="cs9-Td-ovM" firstAttribute="leading" secondItem="6r5-Ac-fLp" secondAttribute="leading" constant="16" id="8kD-TM-j3B"/>
+                                                <constraint firstItem="cs9-Td-ovM" firstAttribute="top" secondItem="6r5-Ac-fLp" secondAttribute="top" constant="8" id="HWG-bu-9YT"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GpK-SM-a1T" secondAttribute="bottom" constant="16" id="KHw-wg-0qx"/>
+                                                <constraint firstAttribute="trailing" secondItem="cs9-Td-ovM" secondAttribute="trailing" constant="16" id="W0t-wa-aY4"/>
+                                                <constraint firstItem="GpK-SM-a1T" firstAttribute="leading" secondItem="6r5-Ac-fLp" secondAttribute="leadingMargin" constant="32" id="fAN-zo-BV9"/>
+                                                <constraint firstAttribute="bottom" secondItem="cs9-Td-ovM" secondAttribute="bottom" constant="8" id="qEP-Wj-ScE"/>
+                                                <constraint firstItem="GpK-SM-a1T" firstAttribute="top" secondItem="6r5-Ac-fLp" secondAttribute="topMargin" constant="124" id="yuV-wd-QgS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GpK-SM-a1T" secondAttribute="trailing" constant="32" id="zQd-4z-XIP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -80,11 +82,11 @@
             </objects>
             <point key="canvasLocation" x="1011.4503816793892" y="3.5211267605633805"/>
         </scene>
-        <!--Item-->
+        <!--Search-->
         <scene sceneID="1sq-s2-ioI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vn6-NH-HpV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="au3-Qe-XRz">
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="au3-Qe-XRz">
                         <color key="badgeColor" red="0.92156863209999995" green="0.26666668059999998" blue="0.35294118520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                     <toolbarItems/>
