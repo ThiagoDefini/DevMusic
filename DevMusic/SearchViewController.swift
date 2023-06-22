@@ -36,7 +36,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? SearchTableViewCell else {
             return UITableViewCell() }
         
-//        cell.selectionStyle = .none
+
         cell.categoryImage.image = UIImage(named: categories[indexPath.row].description)
         cell.categoryLabel.text = categories[indexPath.row].description
         
@@ -52,7 +52,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
 
     //Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.dequeueReusableCell(withIdentifier: IndexPath)?.contentView.laye r.backgroundColor
         tableView.deselectRow(at: indexPath, animated: true)
     }
 

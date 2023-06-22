@@ -79,6 +79,26 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         navigationItem.searchController = searchController
     }
 
+    
+    //Delegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToPlayMusic", sender: self.musics[indexPath.row])
+    }
+    
+    //Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToPlayMusic"{
+            guard let destination = segue.destination as? PlayMusicViewController,
+                    let music = sender as? Music else { return }
+            
+            destination.music = music
+            
+            
+        }
+        
+        
+    }
+    
 }
 
 extension FavoritesViewController: UISearchResultsUpdating {

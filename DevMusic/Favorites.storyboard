@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -71,57 +72,67 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FavoritesId" rowHeight="67" id="JTY-aR-Qxe" customClass="FavoritesTableViewCell" customModule="DevMusic" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="298" width="393" height="67"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FavoritesId" rowHeight="79" id="JTY-aR-Qxe" customClass="FavoritesTableViewCell" customModule="DevMusic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="298" width="393" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JTY-aR-Qxe" id="Sr2-qn-GiN">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="67"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="92" translatesAutoresizingMaskIntoConstraints="NO" id="GyP-Hg-sDv">
-                                                    <rect key="frame" x="40" y="11" width="332.33333333333331" height="48"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="oDr-tk-yVe">
-                                                            <rect key="frame" x="0.0" y="0.0" width="189.66666666666666" height="48"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fuN-yL-ydo">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="48" id="47Q-7E-mMl"/>
-                                                                        <constraint firstAttribute="width" constant="48" id="YV2-gN-0Dc"/>
-                                                                    </constraints>
-                                                                </imageView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mTN-6E-o3x">
-                                                                    <rect key="frame" x="62.000000000000007" y="0.0" width="127.66666666666669" height="48"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nome da musica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzp-sQ-Zaj">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="127.66666666666667" height="27.666666666666668"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Banda ou Cantor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8l-6Y-nef">
-                                                                            <rect key="frame" x="0.0" y="27.666666666666671" width="127.66666666666667" height="20.333333333333329"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhT-OB-hgI">
-                                                            <rect key="frame" x="281.66666666666669" y="0.0" width="50.666666666666686" height="48"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system" title=""/>
-                                                        </button>
-                                                    </subviews>
-                                                </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fuN-yL-ydo">
+                                                    <rect key="frame" x="20" y="8" width="48" height="63"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="47Q-7E-mMl"/>
+                                                        <constraint firstAttribute="width" constant="48" id="YV2-gN-0Dc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da musica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzp-sQ-Zaj">
+                                                    <rect key="frame" x="84" y="27" width="250" height="20.333333333333329"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="250" id="5E1-Ob-juT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banda ou Cantor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8l-6Y-nef">
+                                                    <rect key="frame" x="84" y="36.333333333333336" width="250" height="15.666666666666664"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="250" id="7aK-40-jOK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" systemColor="systemGray2Color"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TN-8U-RsP">
+                                                    <rect key="frame" x="354" y="28.666666666666671" width="19" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="19" id="Qtp-Kb-aD2"/>
+                                                        <constraint firstAttribute="height" constant="22" id="peo-m5-Evt"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="tintColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system" title=""/>
+                                                    <connections>
+                                                        <action selector="favoriteButton:" destination="fLy-Qu-emO" eventType="touchUpInside" id="bAl-Vh-jK8"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="b8l-6Y-nef" firstAttribute="leading" secondItem="fuN-yL-ydo" secondAttribute="trailing" constant="16" id="4wi-61-XWQ"/>
+                                                <constraint firstItem="fuN-yL-ydo" firstAttribute="top" secondItem="Sr2-qn-GiN" secondAttribute="top" constant="8" id="7nG-bR-D77"/>
+                                                <constraint firstItem="8TN-8U-RsP" firstAttribute="centerY" secondItem="Sr2-qn-GiN" secondAttribute="centerY" id="LHQ-dR-Q5q"/>
+                                                <constraint firstItem="Rzp-sQ-Zaj" firstAttribute="leading" secondItem="fuN-yL-ydo" secondAttribute="trailing" constant="16" id="OmB-dq-5IN"/>
+                                                <constraint firstItem="fuN-yL-ydo" firstAttribute="leading" secondItem="Sr2-qn-GiN" secondAttribute="leading" constant="20" id="RvL-jD-PGS"/>
+                                                <constraint firstAttribute="bottom" secondItem="fuN-yL-ydo" secondAttribute="bottom" constant="8" id="ayC-ZN-ZgL"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="b8l-6Y-nef" secondAttribute="bottom" constant="16" id="dbc-0X-yFz"/>
+                                                <constraint firstItem="Rzp-sQ-Zaj" firstAttribute="top" secondItem="Sr2-qn-GiN" secondAttribute="topMargin" constant="16" id="gdn-0u-QaW"/>
+                                                <constraint firstAttribute="trailing" secondItem="8TN-8U-RsP" secondAttribute="trailing" constant="20" id="vCJ-cI-VnB"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="bandLabel" destination="b8l-6Y-nef" id="6Cj-Cu-KmE"/>
-                                            <outlet property="favoriteButton" destination="NhT-OB-hgI" id="0TF-pG-bhu"/>
+                                            <outlet property="favoriteButton" destination="8TN-8U-RsP" id="fv5-vj-3MT"/>
                                             <outlet property="musicImage" destination="fuN-yL-ydo" id="BAZ-iM-vay"/>
                                             <outlet property="nameLabel" destination="Rzp-sQ-Zaj" id="faB-zH-k9S"/>
                                         </connections>
@@ -140,11 +151,21 @@
                     <navigationItem key="navigationItem" id="ngd-MA-dQf"/>
                     <connections>
                         <outlet property="tableView" destination="gVS-Wx-Bjx" id="H7H-Pn-KtA"/>
+                        <segue destination="K30-7t-mJe" kind="presentation" identifier="goToPlayMusic" id="cGt-1u-Lqb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jt9-hR-Cwe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fLy-Qu-emO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="770.2290076335878" y="-383.0985915492958"/>
+            <point key="canvasLocation" x="693.89312977099235" y="-383.0985915492958"/>
+        </scene>
+        <!--PlayMusic-->
+        <scene sceneID="ixy-lx-fJc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlayMusic" id="K30-7t-mJe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6CA-tK-Ytt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1418" y="-383"/>
         </scene>
         <!--Item-->
         <scene sceneID="Y1p-Tj-cvl">
@@ -170,6 +191,9 @@
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="heart.slash" catalog="system" width="128" height="115"/>
+        <namedColor name="tintColor">
+            <color red="1" green="0.21568627450980393" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

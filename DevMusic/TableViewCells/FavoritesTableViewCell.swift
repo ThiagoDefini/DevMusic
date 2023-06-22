@@ -9,6 +9,7 @@ import UIKit
 
 class FavoritesTableViewCell: UITableViewCell {
 
+    
     @IBOutlet weak var musicImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bandLabel: UILabel!
@@ -17,13 +18,8 @@ class FavoritesTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        musicImage.layer.cornerRadius = 12
+        musicImage.layer.cornerRadius = 4
         
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
     }
 
 }
