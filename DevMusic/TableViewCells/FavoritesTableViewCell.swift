@@ -20,6 +20,7 @@ class FavoritesTableViewCell: UITableViewCell {
         
         musicImage.layer.cornerRadius = 4
         
+        
     }
-
+    
 }

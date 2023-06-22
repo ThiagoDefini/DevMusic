@@ -72,6 +72,14 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
     
+    private func isFavorited(music: Music) -> Bool{
+        if favorites.contains(music){
+            return true
+        }else{
+            return false
+        }
+    }
+    
     private func configureSearchbar() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -88,10 +96,11 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
     //Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToPlayMusic"{
-            guard let destination = segue.destination as? PlayMusicViewController,
-                    let music = sender as? Music else { return }
+            guard let destination = segue.destination as? UINavigationController else { return }
+            guard let vc = destination.topViewController as? PlayMusicViewController else { return }
+            guard let musicPicked = sender as? Music else { return }
             
-            destination.music = music
+            vc.music = musicPicked
             
             
         }

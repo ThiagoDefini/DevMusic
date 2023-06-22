@@ -127,6 +127,7 @@ final class MusicService {
     //MARK: Variables Setup
     private let allMusics: [Music]
     private var collections: Set<MusicCollection>
+    static var singleton : MusicService = try! MusicService()
     
     /// The queue with the music being played and the next musics.
     private(set) var queue: Queue

@@ -7,31 +7,43 @@
 
 import UIKit
 
-class PlayMusicViewController: UIViewController {
+class PlayMusicViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var music: Music?
     
-    @IBOutlet weak var musicImage: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var bandLabel: UILabel!
-    @IBOutlet var progressBar: UIView!
-    @IBOutlet weak var timePassLabel: UILabel!
-    @IBOutlet weak var timeLeftLabel: UILabel!
-    @IBOutlet weak var volumeBar: UIProgressView!    
+    @IBOutlet weak var tableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Playing"
-        
-        musicImage.layer.cornerRadius = 12
-        
-        
-        
-        musicImage.image = UIImage(named: "\(music?.id)")
-        nameLabel.text = music?.title
-        bandLabel.text = music?.artist
+
+        tableView.dataSource = self
+        tableView.delegate = self
         
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlayMusicCell1", for: indexPath) as? PlayMusic1TableViewCell else {
+            return UITableViewCell() }
+        
+        cell.music = music
+        cell.fav = MusicService.singleton.favoriteMusics.contains(music!)
+//        cell.musicImage.image = UIImage(named: music?.id ?? "")
+//        cell.nameLabel.text = music?.title
+//        cell.bandLabel.text = music?.artist
+        
+        
+        
+        return cell
+        
+    }
+    
     
     
     
